@@ -50,3 +50,54 @@ GET/todos?completed=true
 
 one route that either has a query value passed or not 
 use conditional (if statement) to find the right option
+
+******************
+
+we're going to build our own todo app with our api interface and our own data
+
+too object should have:
+    - id : id of the todo item
+    - description : what the todo is
+    - completed : true or false
+
+we're building a todo backend and here is what we want to support:
+
+- route that returns all the todos in our list 
+    GET /todos
+        return an array of all todo objects
+
+- route that returns a single todo based on the id provided
+    GET /todos/:id
+        :id is the id of the todo to return if it exists
+        otherwise return message "Id not found"
+
+- route that will delete a single todo based on the id provided
+    DELETE /todos/:id
+        :id is the id of the todo that was deleted
+        return message with the item that was deleted
+
+- route that adds a single todo to the list
+    POST /todos
+        body should include an object that has a description.
+        we'll make a function that generates a random id that's added
+        when the new todo is created
+        ex: body: {"description" : "feed the dog"}
+
+- route that updates an existing todo based on the id provided
+     PUT /todos/:id
+        ex: /todos/10, body= {"description": "buy groceries", "completed": true}
+
+ I am going to build a function to generate a random id
+
+ Math.random() //generate a number between 0 and 1
+                         //it will NEVER return 1
+
+0
+0.001
+0.465465546
+0.56798465464654654
+1 NEVER
+
+0.56798465464654654 * 100000
+567984.65464654654
+Math.floor(567984.65464654654) -> 567984

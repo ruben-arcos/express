@@ -101,3 +101,34 @@ we're building a todo backend and here is what we want to support:
 0.56798465464654654 * 100000
 567984.65464654654
 Math.floor(567984.65464654654) -> 567984
+
+
+*********************************************
+CLASS 4
+
+* Organizing code, files, folders
+        Machine doesn't care, easier to write less buggy code, easier to follow what's going on for humans (team)
+
+        Folder structure is a desing choice.
+        model-view-controller or MVC architecture 
+        is most common 
+
+        routes
+        -   where we define the routes our app supports
+        -   it defines the 'contract' for what our clients/users 
+            will interact with
+
+        controllers
+        -   the code that implements our contract
+        -   code that executes the logic that honors the contract
+
+        model
+        -   the code that handles the data layer
+        
+*   Access is the same:
+        export the things you want to use 
+        require where you want to use them 
+        in express, you can export multiple things in one
+        object
+
+

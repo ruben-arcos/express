@@ -5,6 +5,10 @@ let app = express();
 let PORT = 5001;
 app.use(express.json());
 
+/************************************/
+//let my app know where the public stuff is (for homework)
+app.use(express.static('public'));
+
 //require the routes in the todoRoutes.js
 const toDos = require("./routes/todoRoutes");
 
